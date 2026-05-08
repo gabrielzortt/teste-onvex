@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onvex | Plataforma de Negociações</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-background" aria-hidden="true">
+        <div class="page-background__grid"></div>
+        <div class="page-background__orbit page-background__orbit--primary"></div>
+        <div class="page-background__orbit page-background__orbit--secondary"></div>
+        <div class="page-background__polygon page-background__polygon--primary"></div>
+        <div class="page-background__polygon page-background__polygon--secondary"></div>
+        <div class="page-background__line page-background__line--primary"></div>
+        <div class="page-background__line page-background__line--secondary"></div>
+    </div>
+
+    <div class="page-glow page-glow--top" aria-hidden="true"></div>
+    <div class="page-glow page-glow--middle" aria-hidden="true"></div>
+    <div class="page-glow page-glow--bottom" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="site-header__nav" aria-label="Navegação principal">
+            <div class="site-header__inner">
+                <a href="#hero" class="site-header__brand" aria-label="Ir para o início">
+                    <img src="./logo.png" alt="Logo Onvex" class="site-header__logo">
+                </a>
+
+                <div class="site-header__links">
+                    <a href="#hero" class="site-header__link">
+                        <i data-lucide="house" class="icon icon--sm"></i>
+                        <span>Início</span>
+                    </a>
+                    <a href="#recursos" class="site-header__link">
+                        <i data-lucide="layout-grid" class="icon icon--sm"></i>
+                        <span>Recursos</span>
+                    </a>
+                    <a href="#diferenciais" class="site-header__link">
+                        <i data-lucide="sparkles" class="icon icon--sm"></i>
+                        <span>Diferenciais</span>
+                    </a>
+                    <a href="#taxa" class="site-header__link">
+                        <i data-lucide="circle-dollar-sign" class="icon icon--sm"></i>
+                        <span>Taxas</span>
+                    </a>
+                    <a href="#ferramentas" class="site-header__link">
+                        <i data-lucide="gauge" class="icon icon--sm"></i>
+                        <span>Ferramentas</span>
+                    </a>
+                </div>
+
+                <div class="site-header__actions">
+                    <a href="#login" class="site-header__link">
+                        <span>Login</span>
+                    </a>
+                    <a href="#criar-conta" class="button button--primary button--sm">
+                        <span>Criar conta</span>
+                    </a>
+                </div>
+
+                <button type="button" class="site-header__toggle" aria-expanded="false" aria-controls="mobile-menu"
+                    aria-label="Abrir menu">
+                    <i data-lucide="menu" class="icon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="mobile-nav" hidden>
+            <a href="#hero" class="mobile-nav__link">
+                <i data-lucide="house" class="icon icon--sm"></i>
+                <span>Início</span>
+            </a>
+            <a href="#recursos" class="mobile-nav__link">
+                <i data-lucide="layout-grid" class="icon icon--sm"></i>
+                <span>Recursos</span>
+            </a>
+            <a href="#diferenciais" class="mobile-nav__link">
+                <i data-lucide="sparkles" class="icon icon--sm"></i>
+                <span>Diferenciais</span>
+            </a>
+            <a href="#taxa" class="mobile-nav__link">
+                <i data-lucide="circle-dollar-sign" class="icon icon--sm"></i>
+                <span>Taxas</span>
+            </a>
+            <a href="#ferramentas" class="mobile-nav__link">
+                <i data-lucide="gauge" class="icon icon--sm"></i>
+                <span>Ferramentas</span>
+            </a>
+            <a href="#cta" class="mobile-nav__link">
+                <i data-lucide="arrow-right-circle" class="icon icon--sm"></i>
+                <span>Entrar na plataforma</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section id="hero" class="hero">
+            <img src="./logo.png" alt="Logo Onvex" class="hero__logo reveal reveal--up">
+
+            <h1 class="hero__title reveal reveal--up reveal--delay-sm">
+                A primeira plataforma a unir <br>
+                <span>Cash on Delivery</span>
+                e Produtos Digitais!
+            </h1>
+
+            <p class="hero__description reveal reveal--up reveal--delay-md">
+                A Onvex conecta produtores, afiliados, pedidos e pagamentos em um painel moderno, rápido e preparado
+                para operações de alta performance.
+            </p>
+
+            <div class="hero__actions reveal reveal--up reveal--delay-lg">
+                <a href="#" class="button button--primary">
+                    <span>Entrar na plataforma</span>
+                    <i data-lucide="arrow-right" class="icon"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="recursos" class="features section-block">
+            <div class="section-heading section-heading--left reveal reveal--up">
+                <h2 class="section-heading__title">Recursos</h2>
+                <p class="section-heading__description">
+                    Da negociação ao pagamento, acompanhe todos os pontos críticos para manter sua operação em
+                    movimento.
+                </p>
+            </div>
+
+            <div class="features__grid reveal reveal--up reveal--delay-sm">
+                <article class="feature-card">
+                    <span class="feature-card__number">01</span>
+                    <i data-lucide="truck" class="feature-card__icon"></i>
+                    <h3 class="feature-card__title">Pedidos em tempo real</h3>
+                    <p class="feature-card__text">Acompanhe pedidos agendados, concluídos e em validação com
+                        notificações inteligentes.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-card__number">02</span>
+                    <i data-lucide="hand-coins" class="feature-card__icon"></i>
+                    <h3 class="feature-card__title">Negociação simplificada</h3>
+                    <p class="feature-card__text">Centralize produtos, ofertas, afiliados e regras de comissão em uma
+                        experiência objetiva.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-card__number">03</span>
+                    <i data-lucide="zap" class="feature-card__icon"></i>
+                    <h3 class="feature-card__title">Comissões visíveis</h3>
+                    <p class="feature-card__text">Visualize faturamento, comissão, vendas e produtos com indicadores
+                        claros por período.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-card__number">04</span>
+                    <i data-lucide="shield-check" class="feature-card__icon"></i>
+                    <h3 class="feature-card__title">Operação segura</h3>
+                    <p class="feature-card__text">Organize alertas, status e informações importantes para reduzir ruído
+                        na rotina comercial.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-card__number">05</span>
+                    <i data-lucide="wallet" class="feature-card__icon"></i>
+                    <h3 class="feature-card__title">Histórico financeiro</h3>
+                    <p class="feature-card__text">Veja faturamento, repasses e comissões por período sem depender de
+                        planilhas soltas.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-card__number">06</span>
+                    <i data-lucide="user-check" class="feature-card__icon"></i>
+                    <h3 class="feature-card__title">Painel responsivo</h3>
+                    <p class="feature-card__text">Interface pensada para operar no celular, acompanhar notificações e
+                        agir rápido.</p>
+                </article>
+            </div>
+
+            <div class="operations-preview reveal reveal--up reveal--delay-md">
+                <div class="operations-preview__content reveal reveal--left">
+                    <h2 class="operations-preview__title">
+                        Controle total da operação,
+                        <span>mais clareza para decidir.</span>
+                    </h2>
+                    <p class="operations-preview__text">
+                        Transforme dados de vendas em decisões práticas. Acompanhe desempenho, pedidos, repasses e
+                        produtos sem depender de planilhas soltas.
+                    </p>
+
+                    <ul class="operations-preview__list">
+                        <li class="operations-preview__item">
+                            <span class="operations-preview__item-icon">
+                                <i data-lucide="shield-check" class="icon"></i>
+                            </span>
+                            <span>
+                                <strong>Ambiente visual premium</strong>
+                                <small>Cores, contraste e hierarquia visual alinhados à identidade roxa, preta e branca
+                                    da Onvex.</small>
+                            </span>
+                        </li>
+                        <li class="operations-preview__item">
+                            <span class="operations-preview__item-icon">
+                                <i data-lucide="trending-up" class="icon"></i>
+                            </span>
+                            <span>
+                                <strong>Indicadores por período</strong>
+                                <small>Compare resultados em 7, 30 e 90 dias para entender evolução de vendas e
+                                    faturamento.</small>
+                            </span>
+                        </li>
+                        <li class="operations-preview__item">
+                            <span class="operations-preview__item-icon">
+                                <i data-lucide="wallet" class="icon"></i>
+                            </span>
+                            <span>
+                                <strong>Histórico de notificações</strong>
+                                <small>Receba alertas sobre pedidos completos, agendamentos, comissões e mudanças na
+                                    operação.</small>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="app-showcase reveal reveal--right">
+                    <div class="app-showcase__frame">
+                        <div class="app-showcase__overlay" aria-hidden="true"></div>
+                        <img src="./onvex-app.png" alt="Aplicativo Onvex" class="app-showcase__image">
+                        <div class="app-showcase__notification">
+                            <p>
+                                <i data-lucide="check-circle-2" class="icon"></i>
+                                <span>Pedido atualizado</span>
+                            </p>
+                            <small>Comissão e faturamento sincronizados no painel.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="benefits section-block reveal reveal--up">
+            <div class="section-heading">
+                <span class="section-heading__eyebrow">Por que escolher?</span>
+                <h2 class="section-heading__title">Uma operação Onvex de ponta a ponta.</h2>
+            </div>
+
+            <div class="benefits__grid">
+                <article class="benefit-card benefit-card--featured">
+                    <div class="benefit-card__icon">
+                        <i data-lucide="route" class="icon"></i>
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Ecossistema logístico próprio</h3>
+                        <p class="benefit-card__text">Frota em constante expansão, cobrindo capitais e interiores
+                            estratégicos para manter sua operação ativa.</p>
+                    </div>
+                </article>
+
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <i data-lucide="boxes" class="icon"></i>
+                    </div>
+                    <h3 class="benefit-card__title">Estoque em tempo real</h3>
+                    <p class="benefit-card__text">Controle automático para acompanhar disponibilidade, pedidos e
+                        movimentações sem ruído operacional.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <i data-lucide="credit-card" class="icon"></i>
+                    </div>
+                    <h3 class="benefit-card__title">Todos os pagamentos</h3>
+                    <p class="benefit-card__text">Maquininhas preparadas para diferentes meios de pagamento na porta do
+                        cliente.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <i data-lucide="trending-up" class="icon"></i>
+                    </div>
+                    <h3 class="benefit-card__title">Menos vendas perdidas</h3>
+                    <p class="benefit-card__text">Mais visibilidade para agir rápido, reduzir falhas e proteger cada
+                        oportunidade de conversão.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="taxa" class="finance section-block">
+            <div class="finance__panel reveal reveal--up">
+                <div class="section-heading">
+                    <span class="section-heading__icon">
+                        <i data-lucide="dollar-sign" class="icon icon--lg"></i>
+                    </span>
+                    <h2 class="section-heading__title">Dashboard financeiro completo.</h2>
+                    <p class="section-heading__description">Métricas essenciais para acompanhar sua operação.</p>
+                </div>
+
+                <div class="finance__grid">
+                    <div class="finance__metric">
+                        <span class="finance__label">Faturamento estimado</span>
+                        <strong class="finance__value">R$ 215.805,07</strong>
+                    </div>
+                    <div class="finance__metric">
+                        <span class="finance__label">Comissões geradas</span>
+                        <strong class="finance__value finance__value--accent">R$ 85.380,92</strong>
+                    </div>
+                    <div class="finance__metric">
+                        <span class="finance__label">Vendas registradas</span>
+                        <strong class="finance__value">1.680</strong>
+                    </div>
+                    <div class="finance__metric">
+                        <span class="finance__label">Produtos ativos</span>
+                        <strong class="finance__value">1.957</strong>
+                    </div>
+                    <div class="finance__metric finance__metric--alert">
+                        <span class="finance__label finance__label--with-icon">
+                            <i data-lucide="alert-circle" class="icon icon--sm"></i>
+                            Alertas operacionais
+                        </span>
+                        <strong class="finance__value finance__value--danger">Pedidos pendentes, completos e
+                            agendados</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ferramentas" class="tools section-block">
+            <div class="section-heading reveal reveal--up">
+                <h2 class="section-heading__title">Ferramentas para negociar com velocidade</h2>
+                <p class="section-heading__description">Uma experiência visual inspirada no app Onvex.</p>
+            </div>
+
+            <div class="tools__grid">
+                <article class="tool-card reveal reveal--up reveal--delay-sm">
+                    <i data-lucide="pen-tool" class="tool-card__icon"></i>
+                    <h3 class="tool-card__title">Gestão de ofertas</h3>
+                    <p class="tool-card__text">Organize produtos, preços, comissões e campanhas em poucos cliques.</p>
+                </article>
+
+                <article class="tool-card reveal reveal--up reveal--delay-md">
+                    <i data-lucide="shopping-cart" class="tool-card__icon"></i>
+                    <h3 class="tool-card__title">Relatórios financeiros</h3>
+                    <p class="tool-card__text">Acompanhe faturamento, conversão, produtos e comissões por janela de
+                        tempo.</p>
+                </article>
+
+                <article class="tool-card reveal reveal--up reveal--delay-lg">
+                    <i data-lucide="users" class="tool-card__icon"></i>
+                    <h3 class="tool-card__title">Rede de afiliados</h3>
+                    <p class="tool-card__text">Monitore desempenho individual e distribua oportunidades de venda com
+                        clareza.</p>
+                </article>
+
+                <article class="tool-card reveal reveal--up reveal--delay-sm">
+                    <i data-lucide="ticket" class="tool-card__icon"></i>
+                    <h3 class="tool-card__title">Notificações críticas</h3>
+                    <p class="tool-card__text">Receba alertas sobre pedidos, pagamentos, comissões e pendências
+                        relevantes.</p>
+                </article>
+
+                <article class="tool-card reveal reveal--up reveal--delay-md">
+                    <i data-lucide="map-pin" class="tool-card__icon"></i>
+                    <h3 class="tool-card__title">Operação escalável</h3>
+                    <p class="tool-card__text">Arquitetura visual preparada para crescer sem perder organização.</p>
+                </article>
+
+                <article class="tool-card tool-card--highlight reveal reveal--up reveal--delay-lg">
+                    <div class="tool-card__topline">
+                        <i data-lucide="award" class="tool-card__icon"></i>
+                        <span class="tool-card__badge">ONVEX</span>
+                    </div>
+                    <h3 class="tool-card__title">Painel responsivo</h3>
+                    <p class="tool-card__text">Painel único para produtores, afiliados e gestores acompanharem a
+                        operação com segurança.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="cta" class="cta reveal reveal--up">
+            <h2 class="cta__title">Pronto para operar com a Onvex?</h2>
+            <p class="cta__text">Entre na plataforma e acompanhe negociações, vendas e comissões em tempo real.</p>
+            <a href="#" class="button button--primary button--large">Acessar agora</a>
+        </section>
+    </main>
+
+    <a href="#" class="support-button" aria-label="Conversar com o suporte">
+        <span class="support-button__pulse"></span>
+        <i data-lucide="message-circle" class="icon"></i>
+        <span class="support-button__label">Suporte</span>
+    </a>
+
+    <footer class="site-footer">
+        <div class="site-footer__content">
+            <div class="site-footer__brand">
+                <img src="./logo.png" alt="Logo Onvex" class="site-footer__logo">
+                <p>Central de negociações para Cash on Delivery, produtos digitais, afiliados e operação comercial.</p>
+            </div>
+
+            <div class="site-footer__column">
+                <h3>
+                    <span>Contato</span>
+                    <i data-lucide="mail" class="icon icon--sm"></i>
+                </h3>
+                <a href="">onvexcod@gmail.com</a>
+            </div>
+
+            <div class="site-footer__column">
+                <h3>
+                    <span>Atendimento</span>
+                    <i data-lucide="phone" class="icon icon--sm"></i>
+                </h3>
+                <a href="#cta">Entrar na plataforma</a>
+                <span>Seg-Sex · 8h às 18h</span>
+            </div>
+
+            <div class="site-footer__column">
+                <h3>
+                    <span>Redes</span>
+                    <i data-lucide="globe" class="icon icon--sm"></i>
+                </h3>
+                <div class="site-footer__socials">
+                    <a href="#" aria-label="Instagram" title="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp" title="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" title="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="site-footer__column">
+                <h3>
+                    <span>Termos e Política</span>
+                    <i class="fas fa-balance-scale"></i>
+                </h3>
+                <a href="" style="font-family: 'Courier New', Courier, monospace; width: 150%;">Baixar termos de política e privacidade</a>
+            </div>
+        </div>
+
+        <div class="site-footer__bottom">
+            <span>© 2026 Onvex · Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
