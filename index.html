@@ -12,6 +12,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .site-footer {
+            padding: 30px 0 20px; /* Diminui o tamanho do rodapé */
+        }
+        .site-footer__content {
+            display: flex;
+            justify-content: space-around; /* Distribui e centraliza as colunas */
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .site-footer__column {
+            flex: 1;
+            min-width: 200px;
+            text-align: left;
+        }
+        .site-footer__brand {
+            flex: 1.5;
+            min-width: 250px;
+        }
+    </style>
 </head>
 
 <body>
@@ -403,8 +425,16 @@
                     <span>Contato</span>
                     <i class="fab fa-whatsapp" style="font-size: 1.15rem; margin-left: 5px;"></i>
                 </h3>
-                <a href="mailto:onvexcod@gmail.com" style="display: block; margin-bottom: 8px;">onvexcod@gmail.com</a>
-                <a href="https://wa.me/5500000000000" target="_blank" style="font-weight: 600; color: var(--color-white);">(00) 0 0000-0000</a>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <a href="mailto:onvexcod@gmail.com" style="text-decoration: none;">
+                        <i class="fas fa-envelope" style="margin-right: 5px; font-size: 0.9rem; opacity: 0.8;"></i>
+                        onvexcod@gmail.com
+                    </a>
+                    <a href="https://wa.me/5500000000000" target="_blank" style="font-weight: 600; color: var(--color-white); text-decoration: none;">
+                        <i class="fab fa-whatsapp" style="margin-right: 5px; font-size: 0.9rem;"></i>
+                        (00) 0 0000-0000
+                    </a>
+                </div>
             </div>
 
             <div class="site-footer__column">
@@ -431,8 +461,8 @@
                     <i class="fas fa-balance-scale"></i>
                 </h3>
                 <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
-                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1.12rem;">Termos e Condições</a>
-                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1.12rem;">Política de Privacidade</a>
+                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Termos e Condições</a>
+                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Política de Privacidade</a>
                 </div>
             </div>
         </div>
@@ -444,7 +474,6 @@
 
     <script src="index.js"></script>
     <script>
-        // Inicializa os ícones do Lucide
         lucide.createIcons();
     </script>
 </body>
