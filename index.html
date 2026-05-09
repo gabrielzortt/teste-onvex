@@ -391,12 +391,6 @@
         </section>
     </main>
 
-    <a href="#" class="support-button" aria-label="Conversar com o suporte">
-        <span class="support-button__pulse"></span>
-        <i data-lucide="message-circle" class="icon"></i>
-        <span class="support-button__label">Suporte</span>
-    </a>
-
     <footer class="site-footer">
         <div class="site-footer__content">
             <div class="site-footer__brand">
@@ -406,19 +400,11 @@
 
             <div class="site-footer__column">
                 <h3>
-                    <span>E-mail</span>
-                    <i data-lucide="mail" class="icon icon--sm"></i>
-                </h3>
-                <a href="">onvexcod@gmail.com</a>
-            </div>
-
-            <div class="site-footer__column">
-                <h3>
                     <span>Contato</span>
                     <i class="fab fa-whatsapp" style="font-size: 1.15rem; margin-left: 5px;"></i>
                 </h3>
+                <a href="mailto:onvexcod@gmail.com" style="display: block; margin-bottom: 8px;">onvexcod@gmail.com</a>
                 <a href="https://wa.me/5500000000000" target="_blank" style="font-weight: 600; color: var(--color-white);">(00) 0 0000-0000</a>
-                <span style="display: block; margin-top: 5px;">Seg-Sex · 8h às 18h</span>
             </div>
 
             <div class="site-footer__column">
@@ -438,14 +424,15 @@
                     </a>
                 </div>
             </div>
+
             <div class="site-footer__column">
                 <h3>
                     <span>Termos e Política</span>
                     <i class="fas fa-balance-scale"></i>
                 </h3>
                 <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
-                    <a href="#" class="button button--sm" style="width: 100%; font-family: var(--font-base); justify-content: center; text-decoration: none;">Termos e Condições</a>
-                    <a href="#" class="button button--sm" style="width: 100%; font-family: var(--font-base); justify-content: center; text-decoration: none;">Política de Privacidade</a>
+                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1.12rem;">Termos e Condições</a>
+                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1.12rem;">Política de Privacidade</a>
                 </div>
             </div>
         </div>
@@ -456,6 +443,10 @@
     </footer>
 
     <script src="index.js"></script>
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
