@@ -61,7 +61,7 @@
 
                 <div class="site-header__actions">
                     <a href="#login" class="site-header__link">
-                        <span>Entrar</span>
+                        <span>Login</span>
                     </a>
                     <a href="#criar-conta" class="button button--primary button--sm">
                         <span>Criar conta</span>
@@ -406,7 +406,7 @@
 
             <div class="site-footer__column">
                 <h3>
-                    <span>Contato</span>
+                    <span>E-mail</span>
                     <i data-lucide="mail" class="icon icon--sm"></i>
                 </h3>
                 <a href="">onvexcod@gmail.com</a>
@@ -414,11 +414,11 @@
 
             <div class="site-footer__column">
                 <h3>
-                    <span>Atendimento</span>
-                    <i data-lucide="phone" class="icon icon--sm"></i>
+                    <span>Contato</span>
+                    <i class="fab fa-whatsapp" style="font-size: 1.15rem; margin-left: 5px;"></i>
                 </h3>
-                <a href="#cta">Entrar na plataforma</a>
-                <span>Seg-Sex · 8h às 18h</span>
+                <a href="https://wa.me/5500000000000" target="_blank" style="font-weight: 600; color: var(--color-white);">(00) 0 0000-0000</a>
+                <span style="display: block; margin-top: 5px;">Seg-Sex · 8h às 18h</span>
             </div>
 
             <div class="site-footer__column">
@@ -433,8 +433,8 @@
                     <a href="#" aria-label="WhatsApp" title="whatsapp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="#" aria-label="LinkedIn" title="linkedin">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="mailto:onvexcod@gmail.com" aria-label="Email" title="email">
+                        <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
@@ -443,7 +443,10 @@
                     <span>Termos e Política</span>
                     <i class="fas fa-balance-scale"></i>
                 </h3>
-                <a href="" style="font-family: 'Courier New', Courier, monospace; width: 150%;">Baixar termos de política e privacidade</a>
+                <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
+                    <a href="#" class="button button--sm" style="width: 100%; font-family: var(--font-base); justify-content: center; text-decoration: none;">Termos e Condições</a>
+                    <a href="#" class="button button--sm" style="width: 100%; font-family: var(--font-base); justify-content: center; text-decoration: none;">Política de Privacidade</a>
+                </div>
             </div>
         </div>
 
@@ -453,10 +456,6 @@
     </footer>
 
     <script src="index.js"></script>
-    <script>
-        // Inicializa os ícones do Lucide
-        lucide.createIcons();
-    </script>
 </body>
 
 </html>
