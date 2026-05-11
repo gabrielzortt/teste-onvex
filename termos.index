@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onvex | Termos e Condições</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="./img/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-background" aria-hidden="true">
+        <div class="page-background__grid"></div>
+        <div class="page-background__orbit page-background__orbit--primary"></div>
+        <div class="page-background__orbit page-background__orbit--secondary"></div>
+        <div class="page-background__polygon page-background__polygon--primary"></div>
+        <div class="page-background__polygon page-background__polygon--secondary"></div>
+        <div class="page-background__line page-background__line--primary"></div>
+        <div class="page-background__line page-background__line--secondary"></div>
+    </div>
+
+    <div class="page-glow page-glow--top" aria-hidden="true"></div>
+    <div class="page-glow page-glow--middle" aria-hidden="true"></div>
+    <div class="page-glow page-glow--bottom" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <nav class="site-header__nav" aria-label="Navegação principal">
+            <div class="site-header__inner">
+                <a href="index.html#hero" class="site-header__brand" aria-label="Ir para a página inicial">
+                    <img src="./img/logo.png" alt="Logo Onvex" class="site-header__logo">
+                </a>
+
+                <div class="site-header__links policy-header__links">
+                    <a href="index.html#hero" class="site-header__link">
+                        <i data-lucide="house" class="icon icon--sm"></i>
+                        <span>Início</span>
+                    </a>
+                </div>
+
+                <button type="button" class="site-header__toggle" aria-expanded="false" aria-controls="mobile-menu"
+                    aria-label="Abrir menu">
+                    <i data-lucide="menu" class="icon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="mobile-nav" hidden>
+            <a href="index.html#hero" class="mobile-nav__link">
+                <i data-lucide="house" class="icon icon--sm"></i>
+                <span>Início</span>
+            </a>
+            <a href="index.html#recursos" class="mobile-nav__link">
+                <i data-lucide="layout-grid" class="icon icon--sm"></i>
+                <span>Recursos</span>
+            </a>
+            <a href="index.html#taxa" class="mobile-nav__link">
+                <i data-lucide="circle-dollar-sign" class="icon icon--sm"></i>
+                <span>Taxas</span>
+            </a>
+            <a href="politicas.html" class="mobile-nav__link">
+                <i data-lucide="shield-check" class="icon icon--sm"></i>
+                <span>Política de Privacidade</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="policy-hero">
+            <div class="policy-hero__content reveal reveal--up">
+                <span class="policy-hero__eyebrow">Regras e Diretrizes</span>
+                <h1 class="policy-hero__title">Termos e Condições</h1>
+                <p class="policy-hero__description">
+                    Conheça os termos de uso que regem a sua relação com a plataforma Onvex.
+                </p>
+                <div class="policy-hero__meta">
+                    <span><i data-lucide="calendar-days" class="icon icon--sm"></i> Última atualização: 09 de maio de
+                        2026</span>
+                    <span><i data-lucide="file-text" class="icon icon--sm"></i> Diretrizes operacionais e legais</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="conteudo-termos" class="policy-content section-block">
+            <div class="policy-layout">
+                <aside class="policy-summary reveal reveal--left">
+                    <h2 class="policy-summary__title">Nesta página</h2>
+                    <a href="#introducao" class="policy-summary__link">Introdução</a>
+                    <a href="#cadastro" class="policy-summary__link">Cadastro e Conta</a>
+                    <a href="#uso-plataforma" class="policy-summary__link">Uso da Plataforma</a>
+                    <a href="#pagamentos" class="policy-summary__link">Pagamentos e Taxas</a>
+                    <a href="#produtores" class="policy-summary__link">Obrigações de Produtores</a>
+                    <a href="#compradores" class="policy-summary__link">Obrigações de Compradores</a>
+                    <a href="#propriedade" class="policy-summary__link">Propriedade Intelectual</a>
+                    <a href="#responsabilidade" class="policy-summary__link">Limitação de Responsabilidade</a>
+                    <a href="#alteracoes" class="policy-summary__link">Alterações dos Termos</a>
+                    <a href="#contato" class="policy-summary__link">Contato e Foro</a>
+                </aside>
+
+                <div class="policy-article">
+                    <article id="introducao" class="policy-card reveal reveal--up">
+                        <span class="policy-card__number">01</span>
+                        <h2 class="policy-card__title">Introdução</h2>
+                        <p class="policy-card__text">
+                            Estes Termos e Condições regulam o acesso e a utilização da plataforma Onvex, um sistema de negociações operado por [NOME DA EMPRESA / CNPJ]. 
+                        </p>
+                        <p class="policy-card__text">
+                            Ao acessar, se cadastrar ou realizar transações em nossa plataforma, você concorda expressamente e integralmente com as regras descritas neste documento.
+                        </p>
+                    </article>
+
+                    <article id="cadastro" class="policy-card reveal reveal--up reveal--delay-sm">
+                        <span class="policy-card__number">02</span>
+                        <h2 class="policy-card__title">Cadastro e Conta de Usuário</h2>
+                        <p class="policy-card__text">
+                            Para utilizar os serviços da Onvex, o usuário deverá criar uma conta fornecendo dados precisos, verdadeiros e atualizados.
+                        </p>
+                        <ul class="policy-card__list">
+                            <li><strong>Responsabilidade:</strong> O usuário é o único responsável pela segurança de suas credenciais de acesso.</li>
+                            <li><strong>Suspensão:</strong> A Onvex reserva-se o direito de suspender ou banir contas que apresentem atividades suspeitas, fraudulentas ou informações falsas.</li>
+                        </ul>
+                    </article>
+
+                    <article id="uso-plataforma" class="policy-card reveal reveal--up reveal--delay-md">
+                        <span class="policy-card__number">03</span>
+                        <h2 class="policy-card__title">Uso da Plataforma e Restrições</h2>
+                        <p class="policy-card__text">O usuário concorda em utilizar a Onvex apenas para fins lícitos. É estritamente proibido:</p>
+                        <ul class="policy-card__list">
+                            <li>Comercializar produtos ilegais, piratas ou que violem direitos de terceiros.</li>
+                            <li>Tentar contornar sistemas de segurança ou de processamento de pagamentos.</li>
+                            <li>Utilizar a plataforma para disseminar spam, malware ou realizar fraudes estruturadas.</li>
+                        </ul>
+                    </article>
+
+                    <article id="pagamentos" class="policy-card reveal reveal--up">
+                        <span class="policy-card__number">04</span>
+                        <h2 class="policy-card__title">Pagamentos, Taxas e Saques</h2>
+                        <p class="policy-card__text">
+                            A Onvex atua como facilitadora tecnológica, integrando soluções de pagamento através de parceiros.
+                        </p>
+                        <ul class="policy-card__list">
+                            <li>As taxas de processamento e administração serão descontadas automaticamente no momento da transação.</li>
+                            <li>Regras de antecipação, retenção de segurança (chargebacks) e prazos de saque seguem o regulamento do gateway de pagamento parceiro.</li>
+                        </ul>
+                    </article>
+
+                    <article id="produtores" class="policy-card reveal reveal--up reveal--delay-sm">
+                        <span class="policy-card__number">05</span>
+                        <h2 class="policy-card__title">Obrigações de Produtores e Afiliados</h2>
+                        <ul class="policy-card__list">
+                            <li>Garantir a entrega, qualidade e procedência dos produtos físicos (incluindo operações de Cash on Delivery) e infoprodutos.</li>
+                            <li>Prestar suporte técnico e de atendimento direto ao consumidor final.</li>
+                            <li>Cumprir com o Código de Defesa do Consumidor, incluindo o direito de arrependimento (prazo de 7 dias).</li>
+                        </ul>
+                    </article>
+
+                    <article id="compradores" class="policy-card reveal reveal--up reveal--delay-md">
+                        <span class="policy-card__number">06</span>
+                        <h2 class="policy-card__title">Obrigações dos Compradores</h2>
+                        <p class="policy-card__text">
+                            O comprador deve fornecer endereço de entrega correto e estar disponível ou possuir representante para recebimento nas compras físicas (especialmente no modelo COD).
+                        </p>
+                        <p class="policy-card__text">Abusos na solicitação de estornos (chargeback amigável) poderão resultar em bloqueio permanente do cliente na rede Onvex.</p>
+                    </article>
+
+                    <article id="propriedade" class="policy-card reveal reveal--up">
+                        <span class="policy-card__number">07</span>
+                        <h2 class="policy-card__title">Propriedade Intelectual</h2>
+                        <p class="policy-card__text">
+                            Todos os elementos da plataforma Onvex, incluindo software, código-fonte, marcas, logotipos e design, são propriedades exclusivas da empresa operadora. É vedada a cópia, engenharia reversa ou distribuição sem autorização prévia.
+                        </p>
+                    </article>
+
+                    <article id="responsabilidade" class="policy-card reveal reveal--up reveal--delay-sm">
+                        <span class="policy-card__number">08</span>
+                        <h2 class="policy-card__title">Limitação de Responsabilidade</h2>
+                        <ul class="policy-card__list">
+                            <li>A Onvex fornece apenas a infraestrutura tecnológica para a conexão entre produtores, afiliados e compradores.</li>
+                            <li>Não nos responsabilizamos diretamente por defeitos em produtos de terceiros ou por lucros cessantes.</li>
+                            <li>Garantimos estabilidade de alto nível, mas a plataforma pode sofrer interrupções temporárias para manutenção.</li>
+                        </ul>
+                    </article>
+
+                    <article id="alteracoes" class="policy-card reveal reveal--up reveal--delay-md">
+                        <span class="policy-card__number">09</span>
+                        <h2 class="policy-card__title">Alterações dos Termos</h2>
+                        <p class="policy-card__text">A Onvex reserva-se o direito de modificar estes Termos e Condições a qualquer momento.</p>
+                        <p class="policy-card__text">Os usuários serão notificados sobre mudanças substanciais, e a continuação do uso implicará em aceitação tácita do novo documento.</p>
+                    </article>
+
+                    <article id="contato" class="policy-card reveal reveal--up">
+                        <span class="policy-card__number">10</span>
+                        <h2 class="policy-card__title">Contato e Foro</h2>
+                        <p class="policy-card__text">
+                            Para tratar de assuntos legais referentes a estes termos, entre em contato via: <strong>onvexcod@gmail.com</strong>
+                        </p>
+                        <p class="policy-card__text">
+                            Fica eleito o foro da comarca da sede da empresa operadora para dirimir quaisquer dúvidas ou litígios decorrentes deste instrumento.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__content">
+            <div class="site-footer__brand">
+                <img src="./img/logo.png" alt="Logo Onvex" class="site-footer__logo">
+                <p>Central de negociações para Cash on Delivery, produtos digitais, afiliados e operação comercial.</p>
+            </div>
+
+            <div class="site-footer__column site-footer__column--contact">
+                <h3>
+                    <span>Contato</span>
+                </h3>
+                <div class="site-footer__contact">
+                    <a href="mailto:onvexcod@gmail.com" class="site-footer__contact-link">
+                        <i class="fas fa-envelope"></i>
+                        onvexcod@gmail.com
+                    </a>
+                    <a href="https://wa.me/5500000000000" target="_blank"
+                        class="site-footer__contact-link site-footer__contact-link--strong">
+                        <i class="fab fa-whatsapp"></i>
+                        (00) 0 0000-0000
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-footer__column">
+                <h3>
+                    <span>Navegação</span>
+                    <i data-lucide="compass" class="icon icon--sm"></i>
+                </h3>
+                <a href="index.html#hero">Página inicial</a>
+                <a href="index.html#recursos">Recursos</a>
+                <a href="index.html#cta">Entrar na plataforma</a>
+            </div>
+
+            <div class="site-footer__column">
+                <h3>
+                    <span>Legal</span>
+                    <i class="fas fa-balance-scale"></i>
+                </h3>
+                <a href="politicas.html">Política de Privacidade</a>
+                <a href="#introducao">Termos de Uso</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+
+        <div class="site-footer__bottom">
+            <span>© 2026 Onvex · Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
