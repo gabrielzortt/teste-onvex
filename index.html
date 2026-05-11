@@ -12,6 +12,126 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .finance {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .finance__panel {
+            background: var(--color-surface-strong);
+            border: 1px solid rgba(139, 44, 255, 0.1);
+            border-radius: var(--radius-xl);
+            padding: 4rem 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .finance__container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .finance__main-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            position: relative;
+        }
+
+        .finance__main-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--color-purple);
+        }
+
+        .finance__content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .finance__info {
+            padding-right: 4rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .finance__badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(139, 44, 255, 0.15);
+            color: var(--color-purple-soft);
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .finance__value-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .finance__currency {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-purple-soft);
+            margin-top: 0.8rem;
+        }
+
+        .finance__amount {
+            font-size: 6.5rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to bottom, #fff, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .finance__label { color: var(--color-text-muted); font-size: 1.1rem; }
+
+        .finance__metrics { display: grid; gap: 2.5rem; }
+
+        .finance__metric-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--color-purple-soft);
+            margin-bottom: 0.4rem;
+        }
+
+        .finance__metric-header span {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .finance__metric-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .finance__metric-desc { color: var(--color-text-muted); font-size: 0.95rem; }
+
+        .finance__metric--alert .finance__metric-value { color: var(--color-purple-soft); }
+
+        @media (max-width: 992px) {
+            .finance__content { grid-template-columns: 1fr; gap: 3rem; }
+            .finance__info { padding-right: 0; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 3rem; text-align: center; }
+            .finance__value-box { justify-content: center; }
+        }
+    </style>
 </head>
 
 <body>
@@ -411,11 +531,6 @@
             <a href="#" class="button button--primary button--large">Acessar agora</a>
         </section>
     </main>
-    <a href="#" class="support-button" aria-label="Conversar com o suporte">
-        <span class="support-button__pulse"></span>
-        <i data-lucide="message-circle" class="icon"></i>
-        <span class="support-button__label">Suporte</span>
-    </a>
 
     <footer class="site-footer">
         <div class="site-footer__content">
@@ -425,19 +540,11 @@
             </div>
 
             <div class="site-footer__column site-footer__column--contact">
-                <h3>
-                    <span>Contato</span>
-
-                </h3>
+                <h3><span>Contato</span></h3>
                 <div class="site-footer__contact">
                     <a href="mailto:onvexcod@gmail.com" class="site-footer__contact-link">
                         <i class="fas fa-envelope"></i>
                         onvexcod@gmail.com
-                    </a>
-                    <a href="https://wa.me/5500000000000" target="_blank"
-                        class="site-footer__contact-link site-footer__contact-link--strong">
-                        <i class="fab fa-whatsapp"></i>
-                        (00) 0 0000-0000
                     </a>
                 </div>
             </div>
@@ -448,28 +555,16 @@
                     <i data-lucide="globe" class="icon icon--sm"></i>
                 </h3>
                 <div class="site-footer__socials">
-                    <a href="#" aria-label="Instagram" title="instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" aria-label="WhatsApp" title="whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
             <div class="site-footer__column">
-                <h3>
-                    <span>Termos e Política</span>
-                    <i class="fas fa-balance-scale"></i>
-                </h3>
-                <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
-                    <a href="termos.html"
-                        style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Termos
-                        e Condições</a>
-                    <a href="politicas.html"
-                        style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Política
-                        de Privacidade e de dados</a>
+                <h3><span>Termos e Política</span></h3>
+                <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                    <a href="termos.html" style="text-decoration: none; color: rgba(255, 255, 255, 0.7);">Termos e Condições</a>
+                    <a href="politicas.html" style="text-decoration: none; color: rgba(255, 255, 255, 0.7);">Política de Privacidade</a>
                 </div>
             </div>
         </div>
@@ -480,9 +575,7 @@
     </footer>
 
     <script src="index.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>
