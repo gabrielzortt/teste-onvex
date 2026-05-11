@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onvex | Plataforma de Negociações</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="./img/favicon.png">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -33,7 +33,7 @@
         <nav class="site-header__nav" aria-label="Navegação principal">
             <div class="site-header__inner">
                 <a href="#hero" class="site-header__brand" aria-label="Ir para o início">
-                    <img src="./logo.png" alt="Logo Onvex" class="site-header__logo">
+                    <img src="./img/logo.png" alt="Logo Onvex" class="site-header__logo">
                 </a>
 
                 <div class="site-header__links">
@@ -56,6 +56,15 @@
                     <a href="#ferramentas" class="site-header__link">
                         <i data-lucide="gauge" class="icon icon--sm"></i>
                         <span>Ferramentas</span>
+                    </a>
+                </div>
+
+                <div class="site-header__actions">
+                    <a href="#login" class="site-header__link">
+                        <span>Login</span>
+                    </a>
+                    <a href="#criar-conta" class="button button--primary button--sm">
+                        <span>Criar conta</span>
                     </a>
                 </div>
 
@@ -96,7 +105,7 @@
 
     <main class="page-main">
         <section id="hero" class="hero">
-            <img src="./logo.png" alt="Logo Onvex" class="hero__logo reveal reveal--up">
+            <img src="./img/logo.png" alt="Logo Onvex" class="hero__logo reveal reveal--up">
 
             <h1 class="hero__title reveal reveal--up reveal--delay-sm">
                 A primeira plataforma a unir <br>
@@ -118,7 +127,7 @@
         </section>
 
         <section id="recursos" class="features section-block">
-            <div class="section-heading section-heading--left reveal reveal--up">
+            <div class="section-heading reveal reveal--up">
                 <h2 class="section-heading__title">Recursos</h2>
                 <p class="section-heading__description">
                     Da negociação ao pagamento, acompanhe todos os pontos críticos para manter sua operação em
@@ -224,7 +233,7 @@
                 <div class="app-showcase reveal reveal--right">
                     <div class="app-showcase__frame">
                         <div class="app-showcase__overlay" aria-hidden="true"></div>
-                        <img src="./onvex-app.png" alt="Aplicativo Onvex" class="app-showcase__image">
+                        <img src="./img/onvex-app.png" alt="Aplicativo Onvex" class="app-showcase__image">
                         <div class="app-showcase__notification">
                             <p>
                                 <i data-lucide="check-circle-2" class="icon"></i>
@@ -259,9 +268,10 @@
                     <div class="benefit-card__icon">
                         <i data-lucide="boxes" class="icon"></i>
                     </div>
-                    <h3 class="benefit-card__title">Estoque em tempo real</h3>
-                    <p class="benefit-card__text">Controle automático para acompanhar disponibilidade, pedidos e
-                        movimentações sem ruído operacional.</p>
+                   
+                        <span class="tool-card__badge">EXCLUSIVO</span>
+                    <h3 class="benefit-card__title">Chat Proprio da plataforma</h3>
+                    <p class="benefit-card__text">Chat exclusivo e eficiente para facilitação de contato e precaução de golpe.</p>
                 </article>
 
                 <article class="benefit-card">
@@ -277,9 +287,9 @@
                     <div class="benefit-card__icon">
                         <i data-lucide="trending-up" class="icon"></i>
                     </div>
-                    <h3 class="benefit-card__title">Menos vendas perdidas</h3>
-                    <p class="benefit-card__text">Mais visibilidade para agir rápido, reduzir falhas e proteger cada
-                        oportunidade de conversão.</p>
+                        <span class="tool-card__badge">EXCLUSIVO</span>
+                    <h3 class="benefit-card__title">CPF com produtor</h3>
+                    <p class="benefit-card__text">Ser produtor é possivel somente com o seu CPF, com limite de ate R$5.000 mensais.</p>
                 </article>
             </div>
         </section>
@@ -290,34 +300,54 @@
                     <span class="section-heading__icon">
                         <i data-lucide="dollar-sign" class="icon icon--lg"></i>
                     </span>
-                    <h2 class="section-heading__title">Dashboard financeiro completo.</h2>
-                    <p class="section-heading__description">Métricas essenciais para acompanhar sua operação.</p>
+                    <h2 class="section-heading__title">Taxas</h2>
+                    <p class="section-heading__description" style="text-align: justify; width: 80%;">As taxas
+                        operacionais garantem o funcionamento seguro e
+                        eficiente da plataforma, cobrindo infraestrutura, processamento financeiro, suporte operacional,
+                        logística e custos relacionados às operações.</p>
                 </div>
 
-                <div class="finance__grid">
-                    <div class="finance__metric">
-                        <span class="finance__label">Faturamento estimado</span>
-                        <strong class="finance__value">R$ 215.805,07</strong>
-                    </div>
-                    <div class="finance__metric">
-                        <span class="finance__label">Comissões geradas</span>
-                        <strong class="finance__value finance__value--accent">R$ 85.380,92</strong>
-                    </div>
-                    <div class="finance__metric">
-                        <span class="finance__label">Vendas registradas</span>
-                        <strong class="finance__value">1.680</strong>
-                    </div>
-                    <div class="finance__metric">
-                        <span class="finance__label">Produtos ativos</span>
-                        <strong class="finance__value">1.957</strong>
-                    </div>
-                    <div class="finance__metric finance__metric--alert">
-                        <span class="finance__label finance__label--with-icon">
-                            <i data-lucide="alert-circle" class="icon icon--sm"></i>
-                            Alertas operacionais
-                        </span>
-                        <strong class="finance__value finance__value--danger">Pedidos pendentes, completos e
-                            agendados</strong>
+                <div class="finance__container">
+                    <div class="finance__main-card">
+                        <div class="finance__content">
+                            <div class="finance__info">
+                                <div class="finance__badge">Taxa Fixa</div>
+                                <div class="finance__value-box">
+                                    <span class="finance__currency">R$</span>
+                                    <span class="finance__amount">7,99</span>
+                                </div>
+                                <p class="finance__label">Taxa operacional por processamento</p>
+                            </div>
+
+                            <div class="finance__metrics">
+                                <div class="finance__metric">
+                                    <div class="finance__metric-header">
+                                        <i data-lucide="shopping-cart" class="icon icon--sm"></i>
+                                        <span>Vendas</span>
+                                    </div>
+                                    <span class="finance__metric-value">6,59 %</span>
+                                    <p class="finance__metric-desc">Percentual aplicado sobre cada venda aprovada.</p>
+                                </div>
+
+                                <div class="finance__metric">
+                                    <div class="finance__metric-header">
+                                        <i data-lucide="truck" class="icon icon--sm"></i>
+                                        <span>Entrega</span>
+                                    </div>
+                                    <span class="finance__metric-value">R$ 20,00</span>
+                                    <p class="finance__metric-desc">Destinado aos custos logísticos e distribuição.</p>
+                                </div>
+
+                                <div class="finance__metric--alert">
+                                    <div class="finance__metric-header">
+                                        <i data-lucide="alert-circle" class="icon icon--sm"></i>
+                                        <span>Pedido Frustrado</span>
+                                    </div>
+                                    <span class="finance__metric-value">R$ 4,99</span>
+                                    <p class="finance__metric-desc">Taxa para cancelamentos ou falhas na operação.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -325,8 +355,8 @@
 
         <section id="ferramentas" class="tools section-block">
             <div class="section-heading reveal reveal--up">
-                <h2 class="section-heading__title">Ferramentas para negociar com velocidade</h2>
-                <p class="section-heading__description">Uma experiência visual inspirada no app Onvex.</p>
+                <h2 class="section-heading__title" style="width: 120%;">Ferramentas para negociar com velocidade</h2>
+                <p class="section-heading__description">Veja o que a nossa plataforma é capaz de proporcionar</p>
             </div>
 
             <div class="tools__grid">
@@ -366,7 +396,7 @@
                 <article class="tool-card tool-card--highlight reveal reveal--up reveal--delay-lg">
                     <div class="tool-card__topline">
                         <i data-lucide="award" class="tool-card__icon"></i>
-                        <span class="tool-card__badge">ONVEX</span>
+                        <span class="tool-card__badge">EXCLUSIVO</span>
                     </div>
                     <h3 class="tool-card__title">Painel responsivo</h3>
                     <p class="tool-card__text">Painel único para produtores, afiliados e gestores acompanharem a
@@ -381,7 +411,6 @@
             <a href="#" class="button button--primary button--large">Acessar agora</a>
         </section>
     </main>
-
     <a href="#" class="support-button" aria-label="Conversar com o suporte">
         <span class="support-button__pulse"></span>
         <i data-lucide="message-circle" class="icon"></i>
@@ -391,25 +420,26 @@
     <footer class="site-footer">
         <div class="site-footer__content">
             <div class="site-footer__brand">
-                <img src="./logo.png" alt="Logo Onvex" class="site-footer__logo">
+                <img src="./img/logo.png" alt="Logo Onvex" class="site-footer__logo">
                 <p>Central de negociações para Cash on Delivery, produtos digitais, afiliados e operação comercial.</p>
             </div>
 
-            <div class="site-footer__column">
+            <div class="site-footer__column site-footer__column--contact">
                 <h3>
                     <span>Contato</span>
-                    <i data-lucide="mail" class="icon icon--sm"></i>
-                </h3>
-                <a href="">onvexcod@gmail.com</a>
-            </div>
 
-            <div class="site-footer__column">
-                <h3>
-                    <span>Atendimento</span>
-                    <i data-lucide="phone" class="icon icon--sm"></i>
                 </h3>
-                <a href="#cta">Entrar na plataforma</a>
-                <span>Seg-Sex · 8h às 18h</span>
+                <div class="site-footer__contact">
+                    <a href="mailto:onvexcod@gmail.com" class="site-footer__contact-link">
+                        <i class="fas fa-envelope"></i>
+                        onvexcod@gmail.com
+                    </a>
+                    <a href="https://wa.me/5500000000000" target="_blank"
+                        class="site-footer__contact-link site-footer__contact-link--strong">
+                        <i class="fab fa-whatsapp"></i>
+                        (00) 0 0000-0000
+                    </a>
+                </div>
             </div>
 
             <div class="site-footer__column">
@@ -424,17 +454,23 @@
                     <a href="#" aria-label="WhatsApp" title="whatsapp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="#" aria-label="LinkedIn" title="linkedin">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+
                 </div>
             </div>
+
             <div class="site-footer__column">
                 <h3>
                     <span>Termos e Política</span>
                     <i class="fas fa-balance-scale"></i>
                 </h3>
-                <a href="" style="font-family: 'Courier New', Courier, monospace; width: 150%;">Baixar termos de política e privacidade</a>
+                <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
+                    <a href="termos.html"
+                        style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Termos
+                        e Condições</a>
+                    <a href="politicas.html"
+                        style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Política
+                        de Privacidade e de dados</a>
+                </div>
             </div>
         </div>
 
@@ -444,6 +480,9 @@
     </footer>
 
     <script src="index.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
