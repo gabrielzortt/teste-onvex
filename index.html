@@ -12,6 +12,93 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .finance__grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .finance__metric {
+            display: flex;
+            min-height: 74px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        .finance__metric:hover {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-sm);
+            border-bottom-color: transparent;
+        }
+
+        .finance__metric--alert {
+            grid-column: span 2;
+            border-radius: 14px;
+            background: rgba(239, 68, 68, 0.05);
+            border-bottom: none;
+        }
+        
+        .finance__metric--alert:hover {
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        .finance__label {
+            color: var(--color-text-muted);
+            font-size: 1.05rem;
+        }
+
+        .finance__label--with-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .finance__label--with-icon .icon,
+        .finance__value--danger {
+            color: var(--color-danger);
+        }
+
+        .finance__value {
+            color: var(--color-white);
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-align: right;
+        }
+
+        .finance__value--accent {
+            color: var(--color-purple-soft);
+        }
+
+        @media (max-width: 992px) {
+            .finance__grid {
+                grid-template-columns: 1fr;
+            }
+            .finance__metric--alert {
+                grid-column: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .finance__metric,
+            .finance__metric--alert {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 1.2rem;
+            }
+            .finance__value {
+                text-align: left;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -301,53 +388,34 @@
                         <i data-lucide="dollar-sign" class="icon icon--lg"></i>
                     </span>
                     <h2 class="section-heading__title">Taxas</h2>
-                    <p class="section-heading__description" style="text-align: justify; width: 80%;">As taxas
+                    <p class="section-heading__description" style="text-align: justify; width: 80%; margin: 0 auto;">As taxas
                         operacionais garantem o funcionamento seguro e
                         eficiente da plataforma, cobrindo infraestrutura, processamento financeiro, suporte operacional,
                         logística e custos relacionados às operações.</p>
                 </div>
 
-                <div class="finance__container">
-                    <div class="finance__main-card">
-                        <div class="finance__content">
-                            <div class="finance__info">
-                                <div class="finance__badge">Taxa Fixa</div>
-                                <div class="finance__value-box">
-                                    <span class="finance__currency">R$</span>
-                                    <span class="finance__amount">7,99</span>
-                                </div>
-                                <p class="finance__label">Taxa operacional por processamento</p>
-                            </div>
+                <div class="finance__grid">
+                    <div class="finance__metric">
+                        <span class="finance__label">Taxa por venda</span>
+                        <strong class="finance__value">6,59 %</strong>
+                    </div>
 
-                            <div class="finance__metrics">
-                                <div class="finance__metric">
-                                    <div class="finance__metric-header">
-                                        <i data-lucide="shopping-cart" class="icon icon--sm"></i>
-                                        <span>Vendas</span>
-                                    </div>
-                                    <span class="finance__metric-value">6,59 %</span>
-                                    <p class="finance__metric-desc">Percentual aplicado sobre cada venda aprovada.</p>
-                                </div>
+                    <div class="finance__metric">
+                        <span class="finance__label">Taxa operacional</span>
+                        <strong class="finance__value finance__value--accent">R$ 7,99</strong>
+                    </div>
 
-                                <div class="finance__metric">
-                                    <div class="finance__metric-header">
-                                        <i data-lucide="truck" class="icon icon--sm"></i>
-                                        <span>Entrega</span>
-                                    </div>
-                                    <span class="finance__metric-value">R$ 20,00</span>
-                                    <p class="finance__metric-desc">Destinado aos custos logísticos e distribuição.</p>
-                                </div>
+                    <div class="finance__metric">
+                        <span class="finance__label">Taxa de entrega</span>
+                        <strong class="finance__value">R$ 20,00</strong>
+                    </div>
 
-                                <div class="finance__metric--alert">
-                                    <div class="finance__metric-header">
-                                        <i data-lucide="alert-circle" class="icon icon--sm"></i>
-                                        <span>Pedido Frustrado</span>
-                                    </div>
-                                    <span class="finance__metric-value">R$ 4,99</span>
-                                    <p class="finance__metric-desc">Taxa para cancelamentos ou falhas na operação.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="finance__metric finance__metric--alert">
+                        <span class="finance__label finance__label--with-icon">
+                            <i data-lucide="alert-circle" class="icon icon--sm"></i>
+                            Pedido frustrado
+                        </span>
+                        <strong class="finance__value finance__value--danger">R$ 4,99</strong>
                     </div>
                 </div>
             </div>
