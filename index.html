@@ -23,11 +23,11 @@
 
         .finance__metric {
             display: flex;
-            min-height: 74px;
+            min-height: 90px;
             align-items: center;
             justify-content: space-between;
-            gap: 1rem;
-            padding: 1rem 1.5rem;
+            gap: 1.5rem;
+            padding: 1.5rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             background: transparent;
             transition: background 0.3s ease;
@@ -50,9 +50,17 @@
             background: rgba(239, 68, 68, 0.08);
         }
 
+        .finance__metric-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            max-width: 80%; /* Dá espaço para o valor na direita não espremer o texto */
+        }
+
         .finance__label {
-            color: var(--color-text-muted);
-            font-size: 1.05rem;
+            color: var(--color-white);
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
         .finance__label--with-icon {
@@ -66,11 +74,19 @@
             color: var(--color-danger);
         }
 
+        .finance__desc {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
         .finance__value {
             color: var(--color-white);
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 800;
             text-align: right;
+            white-space: nowrap;
         }
 
         .finance__value--accent {
@@ -84,6 +100,9 @@
             .finance__metric--alert {
                 grid-column: auto;
             }
+            .finance__metric-text {
+                max-width: 75%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -91,7 +110,11 @@
             .finance__metric--alert {
                 align-items: flex-start;
                 flex-direction: column;
-                padding: 1.2rem;
+                padding: 1.5rem 1.2rem;
+                gap: 1rem;
+            }
+            .finance__metric-text {
+                max-width: 100%;
             }
             .finance__value {
                 text-align: left;
@@ -396,25 +419,37 @@
 
                 <div class="finance__grid">
                     <div class="finance__metric">
-                        <span class="finance__label">Taxa por venda</span>
+                        <div class="finance__metric-text">
+                            <span class="finance__label">Taxa por venda</span>
+                            <p class="finance__desc">Percentual aplicado automaticamente sobre cada venda aprovada na plataforma.</p>
+                        </div>
                         <strong class="finance__value">6,59 %</strong>
                     </div>
 
                     <div class="finance__metric">
-                        <span class="finance__label">Taxa operacional</span>
+                        <div class="finance__metric-text">
+                            <span class="finance__label">Taxa operacional</span>
+                            <p class="finance__desc">Cobrança fixa referente ao processamento e manutenção operacional.</p>
+                        </div>
                         <strong class="finance__value finance__value--accent">R$ 7,99</strong>
                     </div>
 
                     <div class="finance__metric">
-                        <span class="finance__label">Taxa de entrega</span>
+                        <div class="finance__metric-text">
+                            <span class="finance__label">Taxa de entrega</span>
+                            <p class="finance__desc">Valor destinado aos custos logísticos e distribuição dos pedidos.</p>
+                        </div>
                         <strong class="finance__value">R$ 20,00</strong>
                     </div>
 
                     <div class="finance__metric finance__metric--alert">
-                        <span class="finance__label finance__label--with-icon">
-                            <i data-lucide="alert-circle" class="icon icon--sm"></i>
-                            Pedido frustrado
-                        </span>
+                        <div class="finance__metric-text">
+                            <span class="finance__label finance__label--with-icon">
+                                <i data-lucide="alert-circle" class="icon icon--sm"></i>
+                                Pedido frustrado
+                            </span>
+                            <p class="finance__desc">Taxa aplicada em situações de cancelamento ou falha na conclusão da operação. Passível de Edição</p>
+                        </div>
                         <strong class="finance__value finance__value--danger">R$ 4,99</strong>
                     </div>
                 </div>
