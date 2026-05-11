@@ -6,34 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onvex | Plataforma de Negociações</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="./img/favicon.png">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .site-footer {
-            padding: 30px 0 20px; /* Diminui o tamanho do rodapé */
-        }
-        .site-footer__content {
-            display: flex;
-            justify-content: space-around; /* Distribui e centraliza as colunas */
-            flex-wrap: wrap;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .site-footer__column {
-            flex: 1;
-            min-width: 200px;
-            text-align: left;
-        }
-        .site-footer__brand {
-            flex: 1.5;
-            min-width: 250px;
-        }
-    </style>
 </head>
 
 <body>
@@ -55,7 +33,7 @@
         <nav class="site-header__nav" aria-label="Navegação principal">
             <div class="site-header__inner">
                 <a href="#hero" class="site-header__brand" aria-label="Ir para o início">
-                    <img src="./logo.png" alt="Logo Onvex" class="site-header__logo">
+                    <img src="./img/logo.png" alt="Logo Onvex" class="site-header__logo">
                 </a>
 
                 <div class="site-header__links">
@@ -127,7 +105,7 @@
 
     <main class="page-main">
         <section id="hero" class="hero">
-            <img src="./logo.png" alt="Logo Onvex" class="hero__logo reveal reveal--up">
+            <img src="./img/logo.png" alt="Logo Onvex" class="hero__logo reveal reveal--up">
 
             <h1 class="hero__title reveal reveal--up reveal--delay-sm">
                 A primeira plataforma a unir <br>
@@ -149,7 +127,7 @@
         </section>
 
         <section id="recursos" class="features section-block">
-            <div class="section-heading section-heading--left reveal reveal--up">
+            <div class="section-heading reveal reveal--up">
                 <h2 class="section-heading__title">Recursos</h2>
                 <p class="section-heading__description">
                     Da negociação ao pagamento, acompanhe todos os pontos críticos para manter sua operação em
@@ -255,7 +233,7 @@
                 <div class="app-showcase reveal reveal--right">
                     <div class="app-showcase__frame">
                         <div class="app-showcase__overlay" aria-hidden="true"></div>
-                        <img src="./onvex-app.png" alt="Aplicativo Onvex" class="app-showcase__image">
+                        <img src="./img/onvex-app.png" alt="Aplicativo Onvex" class="app-showcase__image">
                         <div class="app-showcase__notification">
                             <p>
                                 <i data-lucide="check-circle-2" class="icon"></i>
@@ -321,43 +299,47 @@
                     <span class="section-heading__icon">
                         <i data-lucide="dollar-sign" class="icon icon--lg"></i>
                     </span>
-                    <h2 class="section-heading__title">Dashboard financeiro completo.</h2>
-                    <p class="section-heading__description">Métricas essenciais para acompanhar sua operação.</p>
+                    <h2 class="section-heading__title">Taxas</h2>
+                    <p class="section-heading__description" style="text-align: justify; width: 80%;">As taxas
+                        operacionais garantem o funcionamento seguro e
+                        eficiente da plataforma, cobrindo infraestrutura, processamento financeiro, suporte operacional,
+                        logística e custos relacionados às operações.</p>
                 </div>
 
                 <div class="finance__grid">
-                    <div class="finance__metric">
-                        <span class="finance__label">Faturamento estimado</span>
-                        <strong class="finance__value">R$ 215.805,07</strong>
-                    </div>
-                    <div class="finance__metric">
-                        <span class="finance__label">Comissões geradas</span>
-                        <strong class="finance__value finance__value--accent">R$ 85.380,92</strong>
-                    </div>
-                    <div class="finance__metric">
-                        <span class="finance__label">Vendas registradas</span>
-                        <strong class="finance__value">1.680</strong>
-                    </div>
-                    <div class="finance__metric">
-                        <span class="finance__label">Produtos ativos</span>
-                        <strong class="finance__value">1.957</strong>
-                    </div>
-                    <div class="finance__metric finance__metric--alert">
-                        <span class="finance__label finance__label--with-icon">
-                            <i data-lucide="alert-circle" class="icon icon--sm"></i>
-                            Alertas operacionais
-                        </span>
-                        <strong class="finance__value finance__value--danger">Pedidos pendentes, completos e
-                            agendados</strong>
-                    </div>
+                    <article class="finance__card">
+                        <span class="finance__label">Taxa por venda</span>
+                        <strong class="finance__value">6,59 %</strong>
+                        <p class="finance__text">Percentual aplicado automaticamente sobre cada venda aprovada na
+                            plataforma.</p>
+                    </article>
+
+                    <article class="finance__card">
+                        <span class="finance__label">Taxa operacional</span>
+                        <strong class="finance__value">R$ 7,99</strong>
+                        <p class="finance__text">Cobrança fixa referente ao processamento e manutenção operacional.</p>
+                    </article>
+
+                    <article class="finance__card">
+                        <span class="finance__label">Taxa de entrega</span>
+                        <strong class="finance__value">R$ 20,00</strong>
+                        <p class="finance__text">Valor destinado aos custos logísticos e distribuição dos pedidos.</p>
+                    </article>
+
+                    <article class="finance__card finance__card--danger">
+                        <span class="finance__label">Pedido frustrado</span>
+                        <strong class="finance__value finance__value--danger">R$ 4,99</strong>
+                        <p class="finance__text">Taxa aplicada em situações de cancelamento ou falha na conclusão da
+                            operação. Passível de Edição</p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="ferramentas" class="tools section-block">
             <div class="section-heading reveal reveal--up">
-                <h2 class="section-heading__title">Ferramentas para negociar com velocidade</h2>
-                <p class="section-heading__description">Uma experiência visual inspirada no app Onvex.</p>
+                <h2 class="section-heading__title" style="width: 120%;">Ferramentas para negociar com velocidade</h2>
+                <p class="section-heading__description">Veja o que a nossa plataforma é capaz de proporcionar</p>
             </div>
 
             <div class="tools__grid">
@@ -421,22 +403,23 @@
     <footer class="site-footer">
         <div class="site-footer__content">
             <div class="site-footer__brand">
-                <img src="./logo.png" alt="Logo Onvex" class="site-footer__logo">
+                <img src="./img/logo.png" alt="Logo Onvex" class="site-footer__logo">
                 <p>Central de negociações para Cash on Delivery, produtos digitais, afiliados e operação comercial.</p>
             </div>
 
-            <div class="site-footer__column">
+            <div class="site-footer__column site-footer__column--contact">
                 <h3>
                     <span>Contato</span>
-                    
+
                 </h3>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
-                    <a href="mailto:onvexcod@gmail.com" style="text-decoration: none;">
-                        <i class="fas fa-envelope" style="margin-right: 5px; font-size: 0.9rem; opacity: 0.8;"></i>
+                <div class="site-footer__contact">
+                    <a href="mailto:onvexcod@gmail.com" class="site-footer__contact-link">
+                        <i class="fas fa-envelope"></i>
                         onvexcod@gmail.com
                     </a>
-                    <a href="https://wa.me/5500000000000" target="_blank" style="font-weight: 600; color: var(--color-white); text-decoration: none;">
-                        <i class="fab fa-whatsapp" style="margin-right: 5px; font-size: 0.9rem;"></i>
+                    <a href="https://wa.me/5500000000000" target="_blank"
+                        class="site-footer__contact-link site-footer__contact-link--strong">
+                        <i class="fab fa-whatsapp"></i>
                         (00) 0 0000-0000
                     </a>
                 </div>
@@ -454,7 +437,7 @@
                     <a href="#" aria-label="WhatsApp" title="whatsapp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                  
+
                 </div>
             </div>
 
@@ -464,8 +447,12 @@
                     <i class="fas fa-balance-scale"></i>
                 </h3>
                 <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;">
-                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Termos e Condições</a>
-                    <a href="#" style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Política de Privacidade</a>
+                    <a href="politicas.html"
+                        style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Termos
+                        e Condições</a>
+                    <a href="politicas.html"
+                        style="text-decoration: none; color: rgba(255, 255, 255, 0.78); font-family: var(--font-base); font-size: 1rem;">Política
+                        de Privacidade e de dados</a>
                 </div>
             </div>
         </div>
